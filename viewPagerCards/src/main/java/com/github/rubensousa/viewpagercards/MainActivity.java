@@ -1,17 +1,15 @@
-package com.createon.beliyiet.metis.cardAdapter;
+package com.github.rubensousa.viewpagercards;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.createon.beliyiet.metis.R;
-
-public class CardActivity extends AppCompatActivity implements View.OnClickListener,
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,
         CompoundButton.OnCheckedChangeListener {
 
     private Button mButton;

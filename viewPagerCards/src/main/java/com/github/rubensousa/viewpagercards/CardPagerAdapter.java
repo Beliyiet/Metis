@@ -1,4 +1,4 @@
-package com.createon.beliyiet.metis.cardAdapter;
+package com.github.rubensousa.viewpagercards;
 
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.CardView;
@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.createon.beliyiet.metis.R;
 
 import java.util.ArrayList;
 import java.util.List;

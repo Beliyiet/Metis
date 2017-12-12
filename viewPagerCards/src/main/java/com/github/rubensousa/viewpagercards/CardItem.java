@@ -1,4 +1,4 @@
-package com.createon.beliyiet.metis.cardAdapter;
+package com.github.rubensousa.viewpagercards;
 
 
 public class CardItem {
