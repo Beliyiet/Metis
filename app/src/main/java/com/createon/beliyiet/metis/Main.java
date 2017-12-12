@@ -2,6 +2,7 @@ package com.createon.beliyiet.metis;
 
 import android.content.Context;
 import android.os.Handler;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -92,7 +93,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener,Comp
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Snackbar.make(v, "test~", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
             }
         });
     }
