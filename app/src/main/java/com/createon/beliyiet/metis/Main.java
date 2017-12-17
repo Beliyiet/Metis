@@ -1,106 +1,105 @@
 package com.createon.beliyiet.metis;
 
-import android.content.Context;
-import android.os.Handler;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
-import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import com.createon.beliyiet.metis.cardAdapter.CardFragmentPagerAdapter;
-import com.createon.beliyiet.metis.cardAdapter.CardItem;
-import com.createon.beliyiet.metis.cardAdapter.CardPagerAdapter;
-import com.createon.beliyiet.metis.cardAdapter.ShadowTransformer;
+import com.createon.beliyiet.metis.adapter.CardInfo;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class Main extends AppCompatActivity implements View.OnClickListener,CompoundButton.OnCheckedChangeListener{
+public class Main extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Button button;
-    private ViewPager mViewPager;
-    private CardPagerAdapter mCardAdapter;
-    private ShadowTransformer mCardShadowTransformer;
-    private CardFragmentPagerAdapter mFragmentCardAdapter;
-    private ShadowTransformer mFragmentCardShadowTransformer;
-
+    private CoordinatorLayout mCoordinatorLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
-        mCardAdapter = new CardPagerAdapter();
-        mCardAdapter.addCardItem(new CardItem(R.string.title_1, R.string.text_1));
-        mCardAdapter.addCardItem(new CardItem(R.string.title_2, R.string.text_1));
-        mCardAdapter.addCardItem(new CardItem(R.string.title_3, R.string.text_1));
-        mCardAdapter.addCardItem(new CardItem(R.string.title_4, R.string.text_1));
-        mCardAdapter.addCardItem(new CardItem(R.string.title_5, R.string.text_1));
-        mCardAdapter.addCardItem(new CardItem(R.string.title_6, R.string.text_1));
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
-        mFragmentCardAdapter = new CardFragmentPagerAdapter(getSupportFragmentManager(),
-                dpToPixels(2, this));
-        mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
-        mFragmentCardShadowTransformer = new ShadowTransformer(mViewPager, mFragmentCardAdapter);
-
-        mCardShadowTransformer.enableScaling(true);
-        mFragmentCardShadowTransformer.enableScaling(true);
-        mViewPager.setAdapter(mCardAdapter);
-        mViewPager.setPageTransformer(false, mCardShadowTransformer);
-        mViewPager.setOffscreenPageLimit(3);
-
+        mCoordinatorLayout = (CoordinatorLayout)findViewById(R.id.main_coordinatorlayout);
+        List<CardInfo> mainList = new ArrayList<>();
+        mainList.add(new CardInfo(R.drawable.image_navi,"路线导航"));
     }
-
-    public static float dpToPixels(int dp, Context context) {
-        return dp * (context.getResources().getDisplayMetrics().density);
-    }
-
-
-
-    private boolean mIsExit;
+////////////////////////////////////////////////////////////////////////////////////////////////////
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (mIsExit) {
-                this.finish();
-            } else {
-                Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
-                mIsExit = true;
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mIsExit = false;
-                    }
-                }, 2000);
-            }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
             return true;
         }
-        return super.onKeyDown(keyCode, event);
+
+        return super.onOptionsItemSelected(item);
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public void onClick(View v) {
-        button = (Button)findViewById(R.id.mainButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "test~", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
-            }
-        });
-    }
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
 
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if (id == R.id.nav_note) {
+            // Handle the camera action
+        } else if (id == R.id.nav_tools) {
 
+        } else if (id == R.id.nav_slideshow) {
+
+        } else if (id == R.id.nav_settings) {
+
+        } else if (id == R.id.nav_feedback) {
+
+        } else if (id == R.id.nav_about) {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

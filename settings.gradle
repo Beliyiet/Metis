@@ -1,1 +1,1 @@
-include ':app', ':viewPagerCards'
+include ':app'
