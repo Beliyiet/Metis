@@ -23,8 +23,12 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Data"
+            android:name=".data.Data"
             android:label="@string/title_activity_data"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".data.DataContent"
+            android:label="@string/title_activity_data_content"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

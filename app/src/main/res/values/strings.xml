@@ -110,4 +110,6 @@
 
     <string name="main_card"></string>
     <string name="title_activity_data">实战资料速查</string>
+    <string name="title_activity_data_list">DataList</string>
+    <string name="title_activity_data_content">DataContent</string>
 </resources>

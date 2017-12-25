@@ -5,8 +5,13 @@
     android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Splash"
-    android:background="@drawable/start_greeting3">
+    tools:context=".Splash">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash_compressed"
+        android:scaleType="centerCrop"/>
 
 
 </RelativeLayout>
