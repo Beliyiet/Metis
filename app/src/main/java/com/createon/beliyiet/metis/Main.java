@@ -15,10 +15,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.createon.beliyiet.metis.data.Data;
+import com.createon.beliyiet.metis.navi.Navi;
+import com.createon.beliyiet.metis.programming.Programming;
+import com.createon.beliyiet.metis.test.Test;
 
 import java.util.List;
 import java.util.Map;
@@ -28,16 +32,6 @@ public class Main extends AppCompatActivity
 
     private GridView gridView1;
 
-    private List<Map<String,Object>> dataList;
-    private int[] image = {
-            R.drawable.image_navi,
-            R.drawable.image_3d,
-            R.drawable.image_data,
-            R.drawable.image_learning,
-            R.drawable.image_programme,
-            R.drawable.image_test};
-    private String[] names = {"路线导航","3D模型","预案资料","案例学习","实战资料速查","考试系统"};
-    private SimpleAdapter simpleAdapter1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +51,13 @@ public class Main extends AppCompatActivity
 
         //路线导航//
         CardView cardView1 = (CardView)findViewById(R.id.main_cardview1);
+        cardView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main.this,Navi.class);
+                startActivity(intent);
+            }
+        });
         //3D模型//
         CardView cardView2 = (CardView)findViewById(R.id.main_cardview2);
         //实战资料速查//
@@ -68,13 +69,45 @@ public class Main extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        //预案资料//
+        //作战编程//
         CardView cardView4 = (CardView)findViewById(R.id.main_cardview4);
+        cardView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main.this,Programming.class);
+                startActivity(intent);
+            }
+        });
         //案例学习//
         CardView cardView5 = (CardView)findViewById(R.id.main_cardview5);
         //考试系统//
         CardView cardView6 = (CardView)findViewById(R.id.main_cardview6);
+        cardView6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main.this,Test.class);
+                startActivity(intent);
+            }
+        });
 
+        ImageView imageView1 = (ImageView)findViewById(R.id.img1);
+        ImageView imageView2 = (ImageView)findViewById(R.id.img2);
+        ImageView imageView3 = (ImageView)findViewById(R.id.img3);
+        ImageView imageView4 = (ImageView)findViewById(R.id.img4);
+        ImageView imageView5 = (ImageView)findViewById(R.id.img5);
+        ImageView imageView6 = (ImageView)findViewById(R.id.img6);
+        imageView1.setImageResource(R.drawable.image_navi);
+        imageView1.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView2.setImageResource(R.drawable.image_3dstation);
+        imageView2.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView3.setImageResource(R.drawable.image_data);
+        imageView3.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView4.setImageResource(R.drawable.image_programme);
+        imageView4.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView5.setImageResource(R.drawable.image_learing);
+        imageView5.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView6.setImageResource(R.drawable.image_test);
+        imageView6.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
 
 

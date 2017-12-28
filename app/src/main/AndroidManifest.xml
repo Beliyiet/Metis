@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.createon.beliyiet.metis">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,6 +38,22 @@
         <activity
             android:name=".data.DataContent"
             android:label="@string/title_activity_data_content"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".navi.Navi"
+            android:label="@string/title_activity_navi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".test.Test"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".programming.Programming"
+            android:label="@string/title_activity_programming"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".programming.ProgrammingContent"
+            android:label="@string/title_activity_programming_content"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

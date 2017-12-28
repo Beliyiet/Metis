@@ -18,6 +18,18 @@ public class Data extends AppCompatActivity {
     String url1 = "zhongshangongyuan.pdf";
     String url2 = "beixinjing.pdf";
     String url3 = "loushanguanlu.pdf";
+    String url4 = "songhonglu.pdf";
+    String url5 = "xujingdong.pdf";
+    String url6 = "zhenpinglu.pdf";
+    String url7 = "zhongtanlu.pdf";
+    String url8 = "changshoulu.pdf";
+    String url9 = "longxilu.pdf";
+    String url10 = "shanghaizoo.pdf";
+    String url11 = "songyuanlu.pdf";
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +69,46 @@ public class Data extends AppCompatActivity {
 
                     case 2:
                         intent.putExtra("urlout",url3);
+                        startActivity(intent);
+                        break;
+
+                    case 3:
+                        intent.putExtra("urlout",url4);
+                        startActivity(intent);
+                        break;
+
+                    case 4:
+                        intent.putExtra("urlout",url5);
+                        startActivity(intent);
+                        break;
+
+                    case 5:
+                        intent.putExtra("urlout",url6);
+                        startActivity(intent);
+                        break;
+
+                    case 6:
+                        intent.putExtra("urlout",url7);
+                        startActivity(intent);
+                        break;
+
+                    case 7:
+                        intent.putExtra("urlout",url8);
+                        startActivity(intent);
+                        break;
+
+                    case 8:
+                        intent.putExtra("urlout",url9);
+                        startActivity(intent);
+                        break;
+
+                    case 9:
+                        intent.putExtra("urlout",url10);
+                        startActivity(intent);
+                        break;
+
+                    case 10:
+                        intent.putExtra("urlout",url11);
                         startActivity(intent);
                         break;
 

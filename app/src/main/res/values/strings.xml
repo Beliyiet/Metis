@@ -112,4 +112,8 @@
     <string name="title_activity_data">实战资料速查</string>
     <string name="title_activity_data_list">DataList</string>
     <string name="title_activity_data_content">DataContent</string>
+    <string name="title_activity_navi">Navi</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_programming">Programming</string>
+    <string name="title_activity_programming_content">ProgrammingContent</string>
 </resources>
