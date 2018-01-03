@@ -116,4 +116,6 @@
     <string name="title_activity_test">Test</string>
     <string name="title_activity_programming">Programming</string>
     <string name="title_activity_programming_content">ProgrammingContent</string>
+    <string name="title_activity_study">Study</string>
+    <string name="title_activity_study_content">StudyContent</string>
 </resources>

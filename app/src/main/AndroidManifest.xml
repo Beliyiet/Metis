@@ -54,6 +54,14 @@
         <activity
             android:name=".programming.ProgrammingContent"
             android:label="@string/title_activity_programming_content"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".study.Study"
+            android:label="@string/title_activity_study"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".study.StudyContent"
+            android:label="@string/title_activity_study_content"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

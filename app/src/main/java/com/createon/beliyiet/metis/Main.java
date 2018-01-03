@@ -16,22 +16,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.createon.beliyiet.metis.data.Data;
 import com.createon.beliyiet.metis.navi.Navi;
 import com.createon.beliyiet.metis.programming.Programming;
+import com.createon.beliyiet.metis.study.Study;
 import com.createon.beliyiet.metis.test.Test;
-
-import java.util.List;
-import java.util.Map;
 
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
     private GridView gridView1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +35,7 @@ public class Main extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("Metis");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -80,6 +77,13 @@ public class Main extends AppCompatActivity
         });
         //案例学习//
         CardView cardView5 = (CardView)findViewById(R.id.main_cardview5);
+        cardView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main.this,Study.class);
+                startActivity(intent);
+            }
+        });
         //考试系统//
         CardView cardView6 = (CardView)findViewById(R.id.main_cardview6);
         cardView6.setOnClickListener(new View.OnClickListener() {
