@@ -22,5 +22,8 @@
     android:textSize="18sp"
     android:text="STATIONS"
     android:textColor="@color/cardview_dark_background"
-    android:padding="8dp">
+    android:padding="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp">
 </TextView>

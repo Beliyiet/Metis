@@ -62,7 +62,22 @@
         <activity
             android:name=".study.StudyContent"
             android:label="@string/title_activity_study_content"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".data.DataList"
+            android:label="@string/title_activity_data_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".data.lines.Line1" />
+        <activity android:name=".data.lines.Line2" />
+        <activity android:name=".data.lines.Line3" />
+        <activity android:name=".data.lines.Line4" />
+        <activity android:name=".data.lines.Line5" />
+        <activity android:name=".data.lines.Line6" />
+        <activity android:name=".data.lines.Line9" />
+        <activity android:name=".data.lines.Line10" />
+        <activity android:name=".data.lines.Line11" />
+        <activity android:name=".data.lines.Line12" />
+        <activity android:name=".data.lines.Line13"></activity>
     </application>
 
 </manifest>

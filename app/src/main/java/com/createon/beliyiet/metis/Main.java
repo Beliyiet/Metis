@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.createon.beliyiet.metis.data.Data;
+import com.createon.beliyiet.metis.data.DataList;
 import com.createon.beliyiet.metis.navi.Navi;
 import com.createon.beliyiet.metis.programming.Programming;
 import com.createon.beliyiet.metis.study.Study;
@@ -62,7 +63,7 @@ public class Main extends AppCompatActivity
         cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Main.this,Data.class);
+                Intent intent = new Intent(Main.this,DataList.class);
                 startActivity(intent);
             }
         });
