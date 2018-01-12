@@ -52,18 +52,6 @@
             android:label="@string/title_activity_navi"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".navi.gmap.ComponentActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Light.NoTitleBar" />
-        <activity
-            android:name=".navi.gmap.activity.RouteNaviActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Light.NoTitleBar" />
-        <activity
-            android:name=".navi.gmap.activity.RoutePlanningActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Light.NoTitleBar" />
-        <activity
             android:name=".test.Test"
             android:label="@string/title_activity_test"
             android:theme="@style/AppTheme.NoActionBar" />
