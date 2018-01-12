@@ -73,12 +73,10 @@ public class DataList extends AppCompatActivity {
                     case 0:
 
                         break;
-
                     case 1:
                         Intent intent1 = new Intent(DataList.this,Line2.class);
                         startActivity(intent1);
                         break;
-
                     case 2:
                         Intent intent2 = new Intent(DataList.this,Line3.class);
                         startActivity(intent2);
@@ -89,20 +87,17 @@ public class DataList extends AppCompatActivity {
                         startActivity(intent3);
                         break;
                     case 4:
-                        Intent intent4 = new Intent(DataList.this,Line4.class);
-                        startActivity(intent4);
+
                         break;
                     case 5:
                         Intent intent5 = new Intent(DataList.this,Line6.class);
                         startActivity(intent5);
                         break;
                     case 6:
-                        Intent intent6 = new Intent(DataList.this,Line4.class);
-                        startActivity(intent6);
+
                         break;
                     case 7:
-                        Intent intent7 = new Intent(DataList.this,Line4.class);
-                        startActivity(intent7);
+
                         break;
                     case 8:
                         Intent intent8 = new Intent(DataList.this,Line9.class);
@@ -125,30 +120,23 @@ public class DataList extends AppCompatActivity {
                         startActivity(intent12);
                         break;
                     case 13:
-                        Intent intent13 = new Intent(DataList.this,Line4.class);
-                        startActivity(intent13);
+
                         break;
                     case 14:
-                        Intent intent14 = new Intent(DataList.this,Line4.class);
-                        startActivity(intent14);
+
                         break;
                     case 15:
-                        Intent intent15 = new Intent(DataList.this,Line4.class);
-                        startActivity(intent15);
+
                         break;
                     case 16:
-                        Intent intent16 = new Intent(DataList.this,Line4.class);
-                        startActivity(intent16);
+
                         break;
                     case 17:
-                        Intent intent17 = new Intent(DataList.this,Line4.class);
-                        startActivity(intent17);
+
                         break;
                     case 18:
-                        Intent intent18 = new Intent(DataList.this,Line4.class);
-                        startActivity(intent18);
-                        break;
 
+                        break;
                 }
             }
         });

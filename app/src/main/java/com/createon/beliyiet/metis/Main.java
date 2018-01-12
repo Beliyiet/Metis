@@ -20,7 +20,9 @@ import android.widget.Toast;
 
 import com.createon.beliyiet.metis.data.Data;
 import com.createon.beliyiet.metis.data.DataList;
+import com.createon.beliyiet.metis.navi.JumpToGMap;
 import com.createon.beliyiet.metis.navi.Navi;
+
 import com.createon.beliyiet.metis.programming.Programming;
 import com.createon.beliyiet.metis.study.Study;
 import com.createon.beliyiet.metis.test.Test;
@@ -52,12 +54,21 @@ public class Main extends AppCompatActivity
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main.this,Navi.class);
+                Intent intent = new Intent(Main.this,JumpToGMap.class);
                 startActivity(intent);
             }
         });
         //3D模型//
         CardView cardView2 = (CardView)findViewById(R.id.main_cardview2);
+        cardView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                //包名 包名+类名（全路径）
+                intent.setClassName("com.createon.station", "com.unity3d.player.UnityPlayerActivity");
+                startActivity(intent);
+            }
+        });
         //实战资料速查//
         CardView cardView3 = (CardView)findViewById(R.id.main_cardview3);
         cardView3.setOnClickListener(new View.OnClickListener() {

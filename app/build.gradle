@@ -7,7 +7,7 @@ android {
         minSdkVersion 22
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0 Rebuild_1500"
+        versionName "1.0 Rebuild_4212"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -19,6 +19,18 @@ android {
                 optimizeCode false
                 proguardFile 'proguard-rules.pro'
             }
+        }
+    }
+
+    defaultConfig {
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
         }
     }
 }

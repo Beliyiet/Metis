@@ -18,7 +18,7 @@ public class Line2 extends AppCompatActivity {
     String l2s3 = "2_songhong_road.pdf";
     String l2s4 = "2_beixinjing.pdf";
     String l2s5 = "2_loushanguan_road.pdf";
-    String l2s6 = "2_west_nanjing_road.pdf";
+    String l2s6 = "2-12-13_west_nanjing_road.pdf";
     String l2s7 = "2_changshou_road.pdf";
     String l2s8 = "2-4-6-9_century_avenue.pdf";
 
