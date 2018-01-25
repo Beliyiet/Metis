@@ -40,10 +40,6 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".data.Data"
-            android:label="@string/title_activity_data"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".data.DataContent"
             android:label="@string/title_activity_data_content"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -72,7 +68,7 @@
             android:label="@string/title_activity_study_content"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".data.DataList"
+            android:name=".data.StationDataList"
             android:label="@string/title_activity_data_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".data.lines.Line1" />
@@ -86,7 +82,13 @@
         <activity android:name=".data.lines.Line11" />
         <activity android:name=".data.lines.Line12" />
         <activity android:name=".data.lines.Line13" />
-        <activity android:name=".navi.JumpToGMap"></activity>
+        <activity android:name=".navi.JumpToGMap" />
+        <activity android:name=".drawer.Camera" />
+        <activity android:name=".data.Data" />
+        <activity
+            android:name=".data.CommunityDataList"
+            android:label="@string/title_activity_community_data_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

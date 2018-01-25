@@ -22,7 +22,7 @@ import com.createon.beliyiet.metis.data.lines.Line4;
 import com.createon.beliyiet.metis.data.lines.Line6;
 import com.createon.beliyiet.metis.data.lines.Line9;
 
-public class DataList extends AppCompatActivity {
+public class StationDataList extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,23 +74,23 @@ public class DataList extends AppCompatActivity {
 
                         break;
                     case 1:
-                        Intent intent1 = new Intent(DataList.this,Line2.class);
+                        Intent intent1 = new Intent(StationDataList.this,Line2.class);
                         startActivity(intent1);
                         break;
                     case 2:
-                        Intent intent2 = new Intent(DataList.this,Line3.class);
+                        Intent intent2 = new Intent(StationDataList.this,Line3.class);
                         startActivity(intent2);
                         break;
 
                     case 3:
-                        Intent intent3 = new Intent(DataList.this,Line4.class);
+                        Intent intent3 = new Intent(StationDataList.this,Line4.class);
                         startActivity(intent3);
                         break;
                     case 4:
 
                         break;
                     case 5:
-                        Intent intent5 = new Intent(DataList.this,Line6.class);
+                        Intent intent5 = new Intent(StationDataList.this,Line6.class);
                         startActivity(intent5);
                         break;
                     case 6:
@@ -100,23 +100,23 @@ public class DataList extends AppCompatActivity {
 
                         break;
                     case 8:
-                        Intent intent8 = new Intent(DataList.this,Line9.class);
+                        Intent intent8 = new Intent(StationDataList.this,Line9.class);
                         startActivity(intent8);
                         break;
                     case 9:
-                        Intent intent9 = new Intent(DataList.this,Line10.class);
+                        Intent intent9 = new Intent(StationDataList.this,Line10.class);
                         startActivity(intent9);
                         break;
                     case 10:
-                        Intent intent10 = new Intent(DataList.this,Line11.class);
+                        Intent intent10 = new Intent(StationDataList.this,Line11.class);
                         startActivity(intent10);
                         break;
                     case 11:
-                        Intent intent11 = new Intent(DataList.this,Line12.class);
+                        Intent intent11 = new Intent(StationDataList.this,Line12.class);
                         startActivity(intent11);
                         break;
                     case 12:
-                        Intent intent12 = new Intent(DataList.this,Line13.class);
+                        Intent intent12 = new Intent(StationDataList.this,Line13.class);
                         startActivity(intent12);
                         break;
                     case 13:

@@ -222,4 +222,7 @@
 
     <string name="drawer_open">开</string>
     <string name="drawer_close">关</string>
+
+    <string name="search_hint">输入小区名称或门牌号</string>
+    <string name="title_activity_community_data_list">CommunityDataList</string>
 </resources>

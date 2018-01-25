@@ -7,6 +7,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
@@ -19,9 +20,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.createon.beliyiet.metis.data.Data;
-import com.createon.beliyiet.metis.data.DataList;
+import com.createon.beliyiet.metis.data.StationDataList;
 import com.createon.beliyiet.metis.navi.JumpToGMap;
-import com.createon.beliyiet.metis.navi.Navi;
 
 import com.createon.beliyiet.metis.programming.Programming;
 import com.createon.beliyiet.metis.study.Study;
@@ -74,7 +74,7 @@ public class Main extends AppCompatActivity
         cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Main.this,DataList.class);
+                Intent intent = new Intent(Main.this,Data.class);
                 startActivity(intent);
             }
         });
@@ -152,18 +152,18 @@ public class Main extends AppCompatActivity
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+        @Override
+        public void onBackPressed() {
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            } else {
+                super.onBackPressed();
+            }
         }
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -175,7 +175,6 @@ public class Main extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -201,12 +200,20 @@ public class Main extends AppCompatActivity
         } else if (id == R.id.nav_feedback) {
 
         } else if (id == R.id.nav_about) {
-
+            initialAlertDialog0();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void initialAlertDialog0() {
+        AlertDialog.Builder alertDialogBuilder0 = new AlertDialog.Builder(this);
+        alertDialogBuilder0.setIcon(R.mipmap.ic_launcher);
+        alertDialogBuilder0.setTitle("Metis");
+        alertDialogBuilder0.setMessage("地铁专业队 灭火救援信息查询系统");
+        alertDialogBuilder0.show();
     }
 
     private boolean mIsExit;
