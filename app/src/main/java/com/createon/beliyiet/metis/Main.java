@@ -54,7 +54,9 @@ public class Main extends AppCompatActivity
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main.this,JumpToGMap.class);
+                Intent intent=new Intent();
+                //包名 包名+类名（全路径）
+                intent.setClassName("com.autonavi.amapauto", "com.autonavi.auto.remote.fill.UsbFillActivity");
                 startActivity(intent);
             }
         });
