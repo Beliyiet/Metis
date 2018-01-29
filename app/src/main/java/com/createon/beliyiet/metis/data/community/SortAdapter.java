@@ -1,6 +1,7 @@
 package com.createon.beliyiet.metis.data.community;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.createon.beliyiet.metis.R;
+import com.createon.beliyiet.metis.data.CommunityDataList;
+import com.createon.beliyiet.metis.data.DataContent;
 
 import java.util.List;
 
@@ -21,6 +24,8 @@ public class SortAdapter extends RecyclerView.Adapter<SortAdapter.ViewHolder> {
     private LayoutInflater mInflater;
     private List<SortModel> mData;
     private Context mContext;
+    String name;
+    String format = ".pdf";
 
     public SortAdapter(Context context, List<SortModel> data) {
         mInflater = LayoutInflater.from(context);
@@ -53,7 +58,11 @@ public class SortAdapter extends RecyclerView.Adapter<SortAdapter.ViewHolder> {
         holder.tvName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                name = mData.get(position).getName() + format;
                 Toast.makeText(mContext, mData.get(position).getName(),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext,DataContent.class);
+                intent.putExtra("urlout",name);
+                mContext.startActivity(intent);
             }
         });
 

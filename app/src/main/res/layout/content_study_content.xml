@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".study.StudyContent"
-    tools:showIn="@layout/activity_study_content">
+    tools:context=".study.StudyContent">
 
     <com.joanzapata.pdfview.PDFView
         android:id="@+id/pdfView3"
