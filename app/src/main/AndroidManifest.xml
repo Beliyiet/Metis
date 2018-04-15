@@ -88,7 +88,11 @@
         <activity
             android:name=".data.CommunityDataList"
             android:label="@string/title_activity_community_data_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".threed.ThreeDList"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

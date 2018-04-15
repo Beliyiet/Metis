@@ -26,6 +26,7 @@ import com.createon.beliyiet.metis.navi.JumpToGMap;
 import com.createon.beliyiet.metis.programming.Programming;
 import com.createon.beliyiet.metis.study.Study;
 import com.createon.beliyiet.metis.test.Test;
+import com.createon.beliyiet.metis.threed.ThreeDList;
 
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -65,9 +66,9 @@ public class Main extends AppCompatActivity
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent();
+                Intent intent=new Intent(Main.this,ThreeDList.class);
                 //包名 包名+类名（全路径）
-                intent.setClassName("com.createon.station", "com.unity3d.player.UnityPlayerActivity");
+
                 startActivity(intent);
             }
         });
