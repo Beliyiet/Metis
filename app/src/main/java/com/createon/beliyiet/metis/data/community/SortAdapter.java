@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.createon.beliyiet.metis.R;
-import com.createon.beliyiet.metis.data.CommunityDataList;
 import com.createon.beliyiet.metis.data.DataContent;
 
 import java.util.List;

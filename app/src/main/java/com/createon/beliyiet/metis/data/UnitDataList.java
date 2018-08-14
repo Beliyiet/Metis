@@ -1,4 +1,4 @@
-package com.createon.beliyiet.metis.threed;
+package com.createon.beliyiet.metis.data;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +13,7 @@ import com.createon.beliyiet.metis.R;
 import com.createon.beliyiet.metis.data.community.ClearEditText;
 import com.createon.beliyiet.metis.data.community.PinyinComparator;
 import com.createon.beliyiet.metis.data.community.PinyinUtils;
-import com.createon.beliyiet.metis.data.community.SortAdapterEx;
+import com.createon.beliyiet.metis.data.community.SortAdapter;
 import com.createon.beliyiet.metis.data.community.SortModel;
 import com.createon.beliyiet.metis.data.community.TitleItemDecoration;
 import com.createon.beliyiet.metis.data.community.WaveSideBar;
@@ -22,11 +22,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ThreeDList extends AppCompatActivity {
+public class UnitDataList extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private RecyclerView mRecyclerView;
     private WaveSideBar mSideBar;
-    private SortAdapterEx mAdapter;
+    private SortAdapter mAdapter;
     private ClearEditText mClearEditText;
     private LinearLayoutManager manager;
 
@@ -41,14 +41,14 @@ public class ThreeDList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_community_data_list);
+        setContentView(R.layout.activity_unit_data_list);
         initViews();
     }
 
     private void initViews() {
         mComparator = new PinyinComparator();
 
-        mSideBar = (WaveSideBar) findViewById(R.id.sideBar);
+        mSideBar = (WaveSideBar) findViewById(R.id.sideBar_2);
 
         //设置右侧SideBar触摸监听
         mSideBar.setOnTouchLetterChangeListener(new WaveSideBar.OnTouchLetterChangeListener() {
@@ -62,8 +62,8 @@ public class ThreeDList extends AppCompatActivity {
             }
         });
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv);
-        mDateList = filledData(getResources().getStringArray(R.array.subway));
+        mRecyclerView = (RecyclerView) findViewById(R.id.rv_2);
+        mDateList = filledData(getResources().getStringArray(R.array.units));
 
         // 根据a-z进行排序源数据
         Collections.sort(mDateList, mComparator);
@@ -72,15 +72,15 @@ public class ThreeDList extends AppCompatActivity {
         manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(manager);
-        mAdapter = new SortAdapterEx(this, mDateList);
+        mAdapter = new SortAdapter(this, mDateList);
         mRecyclerView.setAdapter(mAdapter);
         mDecoration = new TitleItemDecoration(this, mDateList);
         //如果add两个，那么按照先后顺序，依次渲染。
         mRecyclerView.addItemDecoration(mDecoration);
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(ThreeDList.this, DividerItemDecoration.VERTICAL));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(UnitDataList.this, DividerItemDecoration.VERTICAL));
 
 
-        mClearEditText = (ClearEditText) findViewById(R.id.filter_edit);
+        mClearEditText = (ClearEditText) findViewById(R.id.filter_edit_2);
 
         //根据输入框输入值的改变来过滤搜索
         mClearEditText.addTextChangedListener(new TextWatcher() {
@@ -141,7 +141,7 @@ public class ThreeDList extends AppCompatActivity {
         List<SortModel> filterDateList = new ArrayList<>();
 
         if (TextUtils.isEmpty(filterStr)) {
-            filterDateList = filledData(getResources().getStringArray(R.array.subway));
+            filterDateList = filledData(getResources().getStringArray(R.array.units));
         } else {
             filterDateList.clear();
             for (SortModel sortModel : mDateList) {

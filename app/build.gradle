@@ -21,7 +21,6 @@ android {
             }
         }
     }
-
     defaultConfig {
         multiDexEnabled true
         ndk {
@@ -32,6 +31,8 @@ android {
         main {
             jniLibs.srcDirs = ['libs']
         }
+    }
+    productFlavors {
     }
 }
 
@@ -49,5 +50,6 @@ dependencies {
     implementation project(':AgentWeb')
     implementation 'com.android.support:support-annotations:27.0.2'
     compile 'com.jakewharton:butterknife:8.1.0'
+    implementation 'com.shizhefei:LargeImageView:1.1.0'
     implementation files('libs/pinyin4j-2.5.0.jar')
 }

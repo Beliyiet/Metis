@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.createon.beliyiet.metis.R;
+import com.createon.beliyiet.metis.data.lines.Line1;
 import com.createon.beliyiet.metis.data.lines.Line10;
 import com.createon.beliyiet.metis.data.lines.Line11;
 import com.createon.beliyiet.metis.data.lines.Line12;
@@ -19,7 +20,10 @@ import com.createon.beliyiet.metis.data.lines.Line13;
 import com.createon.beliyiet.metis.data.lines.Line2;
 import com.createon.beliyiet.metis.data.lines.Line3;
 import com.createon.beliyiet.metis.data.lines.Line4;
+import com.createon.beliyiet.metis.data.lines.Line5;
 import com.createon.beliyiet.metis.data.lines.Line6;
+import com.createon.beliyiet.metis.data.lines.Line7;
+import com.createon.beliyiet.metis.data.lines.Line8;
 import com.createon.beliyiet.metis.data.lines.Line9;
 
 public class StationDataList extends AppCompatActivity {
@@ -71,7 +75,8 @@ public class StationDataList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-
+                        Intent intent0 = new Intent(StationDataList.this,Line1.class);
+                        startActivity(intent0);
                         break;
                     case 1:
                         Intent intent1 = new Intent(StationDataList.this,Line2.class);
@@ -81,23 +86,25 @@ public class StationDataList extends AppCompatActivity {
                         Intent intent2 = new Intent(StationDataList.this,Line3.class);
                         startActivity(intent2);
                         break;
-
                     case 3:
                         Intent intent3 = new Intent(StationDataList.this,Line4.class);
                         startActivity(intent3);
                         break;
                     case 4:
-
+                        Intent intent4 = new Intent(StationDataList.this,Line5.class);
+                        startActivity(intent4);
                         break;
                     case 5:
                         Intent intent5 = new Intent(StationDataList.this,Line6.class);
                         startActivity(intent5);
                         break;
                     case 6:
-
+                        Intent intent6 = new Intent(StationDataList.this,Line7.class);
+                        startActivity(intent6);
                         break;
                     case 7:
-
+                        Intent intent7 = new Intent(StationDataList.this,Line8.class);
+                        startActivity(intent7);
                         break;
                     case 8:
                         Intent intent8 = new Intent(StationDataList.this,Line9.class);
@@ -118,24 +125,6 @@ public class StationDataList extends AppCompatActivity {
                     case 12:
                         Intent intent12 = new Intent(StationDataList.this,Line13.class);
                         startActivity(intent12);
-                        break;
-                    case 13:
-
-                        break;
-                    case 14:
-
-                        break;
-                    case 15:
-
-                        break;
-                    case 16:
-
-                        break;
-                    case 17:
-
-                        break;
-                    case 18:
-
                         break;
                 }
             }

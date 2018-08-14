@@ -54,5 +54,15 @@ public class Data extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        cardView2 = (CardView)findViewById(R.id.data_unit);
+        cardView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Data.this,UnitDataList.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }

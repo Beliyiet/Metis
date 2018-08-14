@@ -16,7 +16,10 @@ public class Line4 extends AppCompatActivity {
     String l4s1 = "2-4-6-9_century_avenue.pdf";
     String l4s2 = "3-4_west_yanan.pdf";
     String l4s3 = "3-4_zhenping_road.pdf";
-    String l4s4 = "";
+    String l4s4 = "3_4_10_hongqiao_road.pdf";
+    String l4s5 = "3_4_13_jinshajiang_road";
+    String l4s6 = "2_zhongshan_park.pdf";
+    String l4s7 = "3_zhongtan_road.pdf";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,10 @@ public class Line4 extends AppCompatActivity {
                 "世纪大道站",
                 "延安西路站",
                 "镇坪路站",
+                "虹桥路站",
+                "金沙江路站",
+                "中山公园站",
+                "中潭路站",
 
         };
 
@@ -49,6 +56,22 @@ public class Line4 extends AppCompatActivity {
                         break;
                     case 2:
                         intent.putExtra("urlout",l4s3);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent.putExtra("urlout",l4s4);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent.putExtra("urlout",l4s5);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.putExtra("urlout",l4s6);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent.putExtra("urlout",l4s7);
                         startActivity(intent);
                         break;
                 }

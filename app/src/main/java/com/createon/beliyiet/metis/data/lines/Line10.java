@@ -18,6 +18,10 @@ public class Line10 extends AppCompatActivity {
     String l10s3 = "10_shuicheng_road.pdf";
     String l10s4 = "10_songyuan_road.pdf";
     String l10s5 = "10_yili_road.pdf";
+    String l10s6 = "10_hangzhong.pdf";
+    String l10s7 = "10_hongqiao.pdf";
+    String l10s8 = "10_longbaixincun.pdf";
+    String l10s9 = "10_ziteng.pdf";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,11 @@ public class Line10 extends AppCompatActivity {
                 "上海动物园站",
                 "水城路站",
                 "宋园路站",
-                "伊犁路站"
+                "伊犁路站",
+                "航中路站",
+                "虹桥路站",
+                "龙柏新村站",
+                "紫藤路站"
         };
 
         ArrayAdapter list_10 =new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,line10);
@@ -59,6 +67,22 @@ public class Line10 extends AppCompatActivity {
                         break;
                     case 4:
                         intent.putExtra("urlout",l10s5);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.putExtra("urlout",l10s6);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent.putExtra("urlout",l10s7);
+                        startActivity(intent);
+                        break;
+                    case 7:
+                        intent.putExtra("urlout",l10s8);
+                        startActivity(intent);
+                        break;
+                    case 8:
+                        intent.putExtra("urlout",l10s9);
                         startActivity(intent);
                         break;
                 }

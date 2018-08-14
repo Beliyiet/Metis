@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".data.lines.Line1">
+    tools:context=".threed.Display">
 
-    <ListView
-        android:id="@+id/list_line1"
+    <com.shizhefei.view.largeimage.LargeImageView
+        android:id="@+id/imageView"
+        android:scrollbars="vertical|horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="match_parent" />
 
 </android.support.constraint.ConstraintLayout>

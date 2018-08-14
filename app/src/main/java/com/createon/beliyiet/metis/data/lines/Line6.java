@@ -14,6 +14,7 @@ import com.createon.beliyiet.metis.data.DataContent;
 public class Line6 extends AppCompatActivity {
 
     String l6s1 = "2-4-6-9_century_avenue.pdf";
+    String l6s2 = "6_8_11_dtzx.pdf";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,8 @@ public class Line6 extends AppCompatActivity {
 
         final ListView listView = (ListView)findViewById(R.id.list_line6);
         final String[] line6 = {
-                "世纪大道站"
+                "世纪大道站",
+                "东方体育中心站"
         };
 
         ArrayAdapter list_6 = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,line6);
@@ -35,6 +37,10 @@ public class Line6 extends AppCompatActivity {
                 switch (position){
                     case 0 :
                         intent.putExtra("urlout",l6s1);
+                        startActivity(intent);
+                        break;
+                    case 1 :
+                        intent.putExtra("urlout",l6s2);
                         startActivity(intent);
                         break;
                 }

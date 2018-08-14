@@ -18,6 +18,11 @@ public class Line13 extends AppCompatActivity {
     String l13s3 = "13_south_qilianshan_road.pdf";
     String l13s4 = "2-12-13_west_nanjing_road.pdf";
     String l13s5 = "13_zhenbei_road.pdf";
+    String l13s6 = "3_4_13_jinshajiang_road";
+    String l13s7 = "13_west_jinshajiang.pdf";
+    String l13s8 = "13_jinyun.pdf";
+    String l13s9 = "13_wuning.pdf";
+    String l13s10 = "7_13_changshou_road.pdf";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +35,12 @@ public class Line13 extends AppCompatActivity {
                 "丰庄路站",
                 "祁连山南路站",
                 "南京西路站",
-                "真北路站"
+                "真北路站",
+                "金沙江路站",
+                "金沙江西路站",
+                "金运路站",
+                "武宁路站",
+                "长寿路站",
         };
 
         ArrayAdapter list_13 =new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,line13);
@@ -59,6 +69,26 @@ public class Line13 extends AppCompatActivity {
                         break;
                     case 4:
                         intent.putExtra("urlout",l13s5);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.putExtra("urlout",l13s6);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent.putExtra("urlout",l13s7);
+                        startActivity(intent);
+                        break;
+                    case 7:
+                        intent.putExtra("urlout",l13s8);
+                        startActivity(intent);
+                        break;
+                    case 8:
+                        intent.putExtra("urlout",l13s9);
+                        startActivity(intent);
+                        break;
+                    case 9:
+                        intent.putExtra("urlout",l13s10);
                         startActivity(intent);
                         break;
                 }

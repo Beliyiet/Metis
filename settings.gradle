@@ -1,1 +1,1 @@
-include ':app', ':android-pdfview', ':AgentWeb', 'AgentWeb'
+include ':app', ':android-pdfview', ':AgentWeb'

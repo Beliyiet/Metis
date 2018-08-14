@@ -76,7 +76,7 @@ public class Navi extends AppCompatActivity {
                             if (mAlertDialog != null)
                                 mAlertDialog.dismiss();
                         }
-                    })//
+                    })
                     .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -86,7 +86,8 @@ public class Navi extends AppCompatActivity {
 
                             Navi.this.finish();
                         }
-                    }).create();
+                    })
+                    .create();
         mAlertDialog.show();
     }
 

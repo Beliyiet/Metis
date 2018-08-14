@@ -16,6 +16,9 @@ public class Line3 extends AppCompatActivity {
     String l3s1 = "3_zhongtan_road.pdf";
     String l3s2 = "3-4_west_yanan.pdf";
     String l3s3 = "3-4_zhenping_road.pdf";
+    String l3s4 = "3_4_10_hongqiao_road.pdf";
+    String l3s5 = "3_4_13_jinshajiang_road";
+    String l3s6 = "2_3_4_zhongshan_park.pdf";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,10 @@ public class Line3 extends AppCompatActivity {
         final String[] line3 = {
                 "中潭路站",
                 "延安西路站",
-                "镇坪路站"
+                "镇坪路站",
+                "虹桥路站",
+                "金沙江路站",
+                "中山公园站"
         };
 
         ArrayAdapter list_3 =new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,line3);
@@ -47,6 +53,18 @@ public class Line3 extends AppCompatActivity {
                         break;
                     case 2:
                         intent.putExtra("urlout",l3s3);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent.putExtra("urlout",l3s4);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent.putExtra("urlout",l3s5);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.putExtra("urlout",l3s6);
                         startActivity(intent);
                         break;
 

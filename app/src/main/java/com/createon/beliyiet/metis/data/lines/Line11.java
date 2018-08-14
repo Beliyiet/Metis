@@ -16,6 +16,9 @@ public class Line11 extends AppCompatActivity {
     String l11s1 = "11_disney_resort.pdf";
     String l11s2 = "11_kangxing_highway.pdf";
     String l11s3 = "11_xiuyan_road.pdf";
+    String l11s4 = "11_liziyuan.pdf";
+    String l11s5 = "6_8_11_dtzx.pdf";
+    String l11s6 = "1_xujiahui.pdf";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,9 @@ public class Line11 extends AppCompatActivity {
                 "迪士尼站",
                 "康兴公路站",
                 "秀园路站",
+                "李子园站",
+                "东方体育中心站",
+                "徐家汇站",
         };
 
         ArrayAdapter list_11 =new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,line11);
@@ -47,6 +53,18 @@ public class Line11 extends AppCompatActivity {
                         break;
                     case 2:
                         intent.putExtra("urlout",l11s3);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent.putExtra("urlout",l11s4);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent.putExtra("urlout",l11s5);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.putExtra("urlout",l11s6);
                         startActivity(intent);
                         break;
                 }
