@@ -68,7 +68,6 @@ public class Main extends AppCompatActivity
             public void onClick(View v) {
                 Intent intent=new Intent(Main.this,ThreeDList.class);
                 //包名 包名+类名（全路径）
-
                 startActivity(intent);
             }
         });
@@ -195,6 +194,7 @@ public class Main extends AppCompatActivity
         if (id == R.id.nav_note) {
             // Handle the camera action
         } else if (id == R.id.nav_tools) {
+
 
         } else if (id == R.id.nav_slideshow) {
 
