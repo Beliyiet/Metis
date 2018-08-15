@@ -94,8 +94,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".data.UnitDataList" />
         <activity android:name=".data.lines.Line7" />
-        <activity android:name=".data.lines.Line8" />
-        <activity android:name=".threed.Display"></activity>
+        <activity android:name=".data.lines.Line8"></activity>
     </application>
 
 </manifest>
