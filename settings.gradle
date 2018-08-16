@@ -1,1 +1,1 @@
-include ':app', ':android-pdfview', ':AgentWeb'
+include ':app', ':android-pdfview', ':AgentWeb', ':sketch-2.6.1'

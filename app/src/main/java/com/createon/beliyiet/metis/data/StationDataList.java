@@ -126,7 +126,6 @@ public class StationDataList extends AppCompatActivity {
                         Intent intent12 = new Intent(StationDataList.this,Line13.class);
                         startActivity(intent12);
                         break;
-
                 }
             }
         });

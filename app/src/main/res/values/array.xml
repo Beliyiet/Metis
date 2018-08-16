@@ -173,5 +173,8 @@
 
     </string-array>
 
+    <string-array name="subway">
+        <item>2号线-徐泾东地铁站</item>
+    </string-array>
 
 </resources>
