@@ -170,11 +170,39 @@
         <item>置信非金属有限公司_天山西路1028号</item>
         <item>中锐控股集团有限公司_金钟路767弄2号</item>
         <item>中颖电子股份有限公司_金钟路767弄3号</item>
-
     </string-array>
 
     <string-array name="subway">
-        <item>2号线-徐泾东地铁站</item>
+        <item>徐泾东</item>
+        <item>虹桥火车站</item>
+        <item>虹桥2号航站楼</item>
+        <item>淞虹路</item>
+        <item>北新泾</item>
+        <item>威宁路</item>
+        <item>娄山关路</item>
+        <item>中山公园</item>
+        <item>江苏路</item>
+        <item>静安寺</item>
+        <item>南京西路</item>
+        <item>人民广场</item>
+        <item>南京东路</item>
+        <item>陆家嘴</item>
+        <item>东昌路</item>
+        <item>世纪大道</item>
+        <item>上海科技馆</item>
+        <item>世纪公园</item>
+        <item>龙阳路</item>
+        <item>张江高科</item>
+        <item>金科路</item>
+        <item>广兰路</item>
+        <item>唐镇</item>
+        <item>创新中路</item>
+        <item>华夏东路</item>
+        <item>川沙</item>
+        <item>凌空路</item>
+        <item>远东大道</item>
+        <item>海天三路</item>
+        <item>浦东国际机场</item>
     </string-array>
 
 </resources>

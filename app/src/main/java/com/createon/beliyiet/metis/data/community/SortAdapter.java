@@ -51,7 +51,7 @@ public class SortAdapter extends RecyclerView.Adapter<SortAdapter.ViewHolder> {
             });
 
         }
-
+/////////////////////////////////////////////////////////////////////////////////////////
         holder.tvName.setText(this.mData.get(position).getName());
 
         holder.tvName.setOnClickListener(new View.OnClickListener() {

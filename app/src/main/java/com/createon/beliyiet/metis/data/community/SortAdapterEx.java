@@ -25,6 +25,7 @@ public class SortAdapterEx extends RecyclerView.Adapter<SortAdapterEx.ViewHolder
     private List<SortModel> mData;
     private Context mContext;
     String name;
+    String format = ".jpg";
 
     public SortAdapterEx(Context context, List<SortModel> data) {
         mInflater = LayoutInflater.from(context);
@@ -57,10 +58,10 @@ public class SortAdapterEx extends RecyclerView.Adapter<SortAdapterEx.ViewHolder
         holder.tvName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                name = mData.get(position).getName();
+                name = mData.get(position).getName() + format;
                 Toast.makeText(mContext, mData.get(position).getName(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(mContext,Display.class);
-                intent.putExtra("addressout",name);
+                intent.putExtra("stationout",name);
                 mContext.startActivity(intent);
             }
         });
