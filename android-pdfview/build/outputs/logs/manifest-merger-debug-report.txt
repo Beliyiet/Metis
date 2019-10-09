@@ -1,0 +1,29 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\Metis\android-pdfview\AndroidManifest.xml:22:1-31:12
+INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml:22:1-31:12
+INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml:22:1-31:12
+INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml:22:1-31:12
+INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml:22:1-31:12
+INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml:22:1-31:12
+INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml:22:1-31:12
+	package
+		ADDED from F:\Metis\android-pdfview\AndroidManifest.xml:23:7-39
+		INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml
+		INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml
+	android:versionName
+		ADDED from F:\Metis\android-pdfview\AndroidManifest.xml:25:7-34
+		INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml
+		INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\Metis\android-pdfview\AndroidManifest.xml:22:11-69
+	android:versionCode
+		ADDED from F:\Metis\android-pdfview\AndroidManifest.xml:24:7-30
+		INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml
+		INJECTED from F:\Metis\android-pdfview\AndroidManifest.xml
+uses-sdk
+ADDED from F:\Metis\android-pdfview\AndroidManifest.xml:28:2-29:46
+	android:targetSdkVersion
+		ADDED from F:\Metis\android-pdfview\AndroidManifest.xml:29:15-44
+	android:minSdkVersion
+		ADDED from F:\Metis\android-pdfview\AndroidManifest.xml:28:12-37
